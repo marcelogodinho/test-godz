@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 streamlit = "*"
 pandas = "*"
+scikit_learn = "*"
 joblib = "*"
 
 [requires]
