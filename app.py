@@ -1,4 +1,7 @@
 import streamlit as st 
+#import locale
+
+#locale.setlocale(locale.LC_ALL, 'en_US')
 
 #x = st.slider('x')  # 👈 this is a widget
 #st.write(x, 'squared is', x * x)
@@ -33,7 +36,9 @@ st.selectbox('Sexo:', sexo_list)
 st.selectbox('Estado Civil:', est_civil_list)
 st.selectbox('Nacionalidade:', nacionalidade_list)
 st.selectbox('Escolaridade:', escolaridade_list)
-st.slider(label='Saldo em Aplicações', key='Saldo em Aplicações',value=100000, min_value=100000, max_value=100000000, step=100000)
+valor = st.slider(label='Saldo em Aplicações', key='Saldo em Aplicações',value=10.0, min_value=0.0, max_value=100.0, step=0.5, format="%.1f mi")
 #st.sidebar.selectbox('Selecione:', original_list)
 #input_variables=pd.DataFrame([parameter_input_values],columns=parameter_list,dtype=float)
 #st.write('\n\n')
+
+st.write("Valor Selecionado: ", '{:,.0f}'.format(valor*1000000))
